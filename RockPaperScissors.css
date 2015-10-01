@@ -1,22 +1,28 @@
 body {
-	background-color: grey;
+	background-color: #222;
 	background-size: 100%
 }
 
 #page {
 	width: 800px;
 	margin: auto;
-	padding: 50px;
+	padding: 10px 50px 50px 50px;
 	background-color: white;
+	text-align: center;
+}
+
+.choiceContainer {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	justify-content: space-around;
 }
 
 .choice {
-	display: inline-block;
-	position:;
+	
 	width: 200px;
 	height: 200px;
 	margin:5px;
-	padding:;
 	border: 2px solid black;
 }
 	
