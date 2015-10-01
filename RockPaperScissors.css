@@ -7,13 +7,13 @@ body {
 	width: 800px;
 	margin: auto;
 	padding: 10px 50px 50px 50px;
-	background-color: white;
+	background-color: #DDD;
 	text-align: center;
 }
 
 .choiceWrapper {
 	border-radius: 10px;
-	background-color: lightgreen;
+	background-color: #DFD;
 	padding: 5px 0px 10px 0px;
 }
 
@@ -29,12 +29,13 @@ body {
 	width: 200px;
 	height: 200px;
 	margin:5px;
-	border: 2px solid black;
-}
+	}
 
 	
 .choice:hover {
 	border: 4px solid black;
-	margin-bottom: -4px;
-	top: -2px;
+	border-radius: 5px;
+	margin-bottom: -6px;
+	top: -6px;
+	padding: 2px;
 }
