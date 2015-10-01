@@ -1,7 +1,17 @@
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 body {
 	background-color: #222;
 	background-size: 100%;
-	font-family: 'Signika', sans-serif;
+
 }
 
 #page {
@@ -15,28 +25,21 @@ body {
 .choiceWrapper {
 	border-radius: 10px;
 	background-color: #DFD;
-	padding: 5px 0px 10px 0px;
-}
-
-.choiceContainer {
-	display: flex;
-	padding: 0;
-	margin: 0;
-	justify-content: space-around;
+	padding: 5px 0px 15px 0px;
 }
 
 .choice {
-	position: relative;
-	width: 200px;
-	height: 200px;
-	margin:5px;
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	margin:5px 20px;
+	padding: 8px;
 	}
 
-	
+
 .choice:hover {
-	border: 4px solid black;
+	border: 6px solid black;
 	border-radius: 5px;
 	margin-bottom: -6px;
-	top: -6px;
 	padding: 2px;
-}
+	]
