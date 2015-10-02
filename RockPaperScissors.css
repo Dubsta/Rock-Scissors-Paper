@@ -20,6 +20,22 @@ body {
 	padding: 10px 50px 50px 50px;
 	background-color: #DDD;
 	text-align: center;
+	font-family: signika, helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: '3dumbregular';
+    src: url('font/3Dumb-webfont.eot');
+    src: url('font/3Dumb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/3Dumb-webfont.woff') format('woff'),
+         url('font/3Dumb-webfont.ttf') format('truetype'),
+         url('font/3Dumb-webfont.svg#3dumbregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+	font-family: '3dumbregular';
 }
 
 .choiceWrapper {
@@ -35,9 +51,29 @@ body {
 	padding: 8px;
 	}
 
-
-.choice:hover {
+.hoverHighlight {
 	border: 6px solid black;
+	border-radius: 5px;
+	margin-bottom: -6px;
+	padding: 2px;
+}
+
+.selectHighlight {
+	border: 6px solid orange;
+	border-radius: 5px;
+	margin-bottom: -6px;
+	padding: 2px;
+}
+
+.winHighlight {
+	border: 6px solid green;
+	border-radius: 5px;
+	margin-bottom: -6px;
+	padding: 2px;
+}
+
+.loseHighlight {
+	border: 6px solid red;
 	border-radius: 5px;
 	margin-bottom: -6px;
 	padding: 2px;
@@ -45,30 +81,40 @@ body {
 
 .middle {
 	height: 100px;
+	position: relative;
 }
 
-#GameResult {
+#gameResult {
 	height: 56px;
 	width: 200px;
-	background: yellow;
+	background: #66F;
 	border-radius: 5px;
 	/*stuff to center*/
 	position: absolute;
-  	top: 50%;
-  	left: 50%;
+	top: 50%;
+	left: 50%;
   	margin-top: -28px;
   	margin-left: -100px;
   	/*Vertically center text*/
   	padding: 17px 0px 17px 0px;
   	font-weight: bold;
   	font-size: 20px;
+}
 
+.win {
+	background: #6F6;
+}
 
+.lose {
+	background: #F66;
+}
+
+.tie {
+	background: #FF6; 
 }
 
 #player {
 	background-color: #DFD;
-
 }
 
 #computer {

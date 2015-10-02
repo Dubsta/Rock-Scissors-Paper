@@ -1,12 +1,25 @@
 $(document).ready(function() {
 
-//user choice prompt
-//var userChoice = prompt("Do you choose rock, paper or scissors?");
+// flag for game event of playing
+var playing = false;
+
+$("#player .choice").mouseenter(function(){
+	if (playing == false) {
+		$(this).addClass("hoverHighlight")
+	}
+});
+$("#player .choice").mouseleave(function() {
+	$(this).removeClass("hoverHighlight");
+});
 
 var userChoice = "not yet";
-$(".choice").click(function() {
-	
-		//Choice selector
+$("#player .choice").click(function() {
+		
+	// Set up 
+	playing = true;
+	$(this).addClass("selectHighlight");
+
+	// Player choice
 	if ($(this).hasClass("rock")) {
 		userChoice = "rock";
 	} else if($(this).hasClass("scissors")) {
@@ -14,35 +27,38 @@ $(".choice").click(function() {
 	} else if($(this).hasClass("paper")) {
 		userChoice = "paper";
 	};
-
 				
+	// Computer Choice
 	var computerChoice = Math.random();
-	console.log(computerChoice);
-	if (computerChoice < 0.34) {
+		if (computerChoice < 0.34) {
 		computerChoice = "rock";
-	} else if(computerChoice <= 0.67) {
+		$("#computer .rock").addClass("selectHighlight");
+	} else if (computerChoice <= 0.67) {
 		computerChoice = "paper";
+		$("#computer .paper").addClass("selectHighlight");
 	} else {
 		computerChoice = "scissors";
+		$("#computer .scissors").addClass("selectHighlight");
 	};
 
-		//Choice logging stuff
-	console.log("Computer: " + computerChoice);
-	console.log("User: " + userChoice);
-	var displayChoice = $("<p>You choose "+userChoice+"</p>");
-	$(".choice").parent().append(displayChoice);
-
+	// Win or Lose function
 	var win = "You win!";
+	function winner() {
+		console.log(win);
+		$("#gameResult").text(win).css("background", "#6F6");
+	}
 	var lose = "Computer wins!";
+
 
 		//tie
 	if (userChoice === computerChoice) {
 		console.log("The result is a tie!");
+		$("#gameResult").text("TIE").css("background", "#FF6");
 	}
 		//Rock
 	else if (userChoice === "rock") {
 		if (computerChoice === "scissors") {
-			console.log(win);
+			winner();
 		} else {
 			console.log(lose);
 	}}
@@ -62,6 +78,10 @@ $(".choice").click(function() {
 			console.log(win);
 		}
 	}
+
+	// Clean up and end event
+	// $(".choice").removeClass("selectHighlight winHighlight loseHighlight");
+	playing = false;
 
 //end of .click function
 });
