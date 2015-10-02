@@ -36,6 +36,9 @@ body {
 
 h1 {
 	font-family: '3dumbregular';
+	font-size: 40px;
+	padding-bottom: 15px;
+	margin: 0px;
 }
 
 .choiceWrapper {
@@ -59,21 +62,21 @@ h1 {
 }
 
 .selectHighlight {
-	border: 6px solid orange;
+	border: 6px solid #FF6;
 	border-radius: 5px;
 	margin-bottom: -6px;
 	padding: 2px;
 }
 
 .winHighlight {
-	border: 6px solid green;
+	border: 6px solid #6F6;
 	border-radius: 5px;
 	margin-bottom: -6px;
 	padding: 2px;
 }
 
 .loseHighlight {
-	border: 6px solid red;
+	border: 6px solid #F66;
 	border-radius: 5px;
 	margin-bottom: -6px;
 	padding: 2px;

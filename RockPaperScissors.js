@@ -45,10 +45,14 @@ $("#player .choice").click(function() {
 	var win = "You win!";
 	function winner() {
 		console.log(win);
+		$("#player .selectHighlight").fade
 		$("#gameResult").text(win).css("background", "#6F6");
 	}
 	var lose = "Computer wins!";
-
+	function loser() {
+		console.log(lose);
+		$("#gameResult").text(lose).css("background", "#F66");
+	}
 
 		//tie
 	if (userChoice === computerChoice) {
@@ -60,22 +64,23 @@ $("#player .choice").click(function() {
 		if (computerChoice === "scissors") {
 			winner();
 		} else {
-			console.log(lose);
+			loser();
+			
 	}}
 		//paper
 	else if (userChoice === "paper") {
 		if (computerChoice === "scissors") {
-			console.log(lose);
+			loser();
 		} else {
-			console.log(win);
+			winner();
 	}}
 
 		//scissors
 	else if (userChoice === "scissors") {
 		if (computerChoice === "rock") {
-			console.log(lose);
+			loser();
 		} else {
-			console.log(win);
+			winner();
 		}
 	}
 
