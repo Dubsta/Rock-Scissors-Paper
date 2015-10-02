@@ -45,12 +45,15 @@ $("#player .choice").click(function() {
 	var win = "You win!";
 	function winner() {
 		console.log(win);
-		$("#player .selectHighlight").fade
+		$("#player .selectHighlight").addClass("winHighlight");
+		$("#computer .selectHighlight").addClass("loseHighlight");
 		$("#gameResult").text(win).css("background", "#6F6");
 	}
 	var lose = "Computer wins!";
 	function loser() {
 		console.log(lose);
+		$("#player .selectHighlight").addClass("loseHighlight");
+		$("#computer .selectHighlight").addClass("winHighlight");
 		$("#gameResult").text(lose).css("background", "#F66");
 	}
 
@@ -86,7 +89,7 @@ $("#player .choice").click(function() {
 
 	// Clean up and end event
 	// $(".choice").removeClass("selectHighlight winHighlight loseHighlight");
-	playing = false;
+	//playing = false;
 
 //end of .click function
 });
