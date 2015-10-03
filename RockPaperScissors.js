@@ -14,6 +14,8 @@ $("#player .choice").mouseleave(function() {
 
 var userChoice = "not yet";
 $("#player .choice").click(function() {
+	// Do nothing if game event is running
+	if (playing == false){
 		
 	// Set up 
 	playing = true;
@@ -47,9 +49,10 @@ $("#player .choice").click(function() {
 		console.log(win);
 		$("#player .selectHighlight").addClass("winHighlight");
 		$("#computer .selectHighlight").addClass("loseHighlight");
-		$("#gameResult").text(win).css("background", "#6F6");
+		$("#gameResult").text(win).css("background", "#6F6")
+		// $("#gameResult").effect("bounce", "slow");
 	}
-	var lose = "Computer wins!";
+	var lose = "You lose!";
 	function loser() {
 		console.log(lose);
 		$("#player .selectHighlight").addClass("loseHighlight");
@@ -87,12 +90,14 @@ $("#player .choice").click(function() {
 		}
 	}
 
-	// Clean up and end event
-	// $(".choice").removeClass("selectHighlight winHighlight loseHighlight");
-	//playing = false;
-
+	// Clean up and end event, ready for next game (after 1.5sec)
+	setTimeout(function() {
+		$(".choice").removeClass("selectHighlight winHighlight loseHighlight");
+		$("#gameResult").text("...Choose Above").css("background", "#66F");
+		playing = false;
+	}, 1500);		
 //end of .click function
-});
+}});
 	
 	
 //end of document ready function
