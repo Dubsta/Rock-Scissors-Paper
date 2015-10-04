@@ -42,7 +42,7 @@ h1 {
 
 .choiceWrapper {
 	border-radius: 10px;
-	padding: 5px 0px 15px 0px;
+	padding: 0px;
 }
 
 .choice {
@@ -97,7 +97,12 @@ h1 {
 	left: 50%;
   	margin-top: -28px;
   	margin-left: -100px;
-  	/*Vertically center text*/
+  	
+}
+
+#gameResult div {
+	/* Needs own container due to jQuery-ui box-sizing bug */
+	/* Roughly vertically center text*/
   	padding: 17px 0px 17px 0px;
   	font-weight: bold;
   	font-size: 20px;
@@ -117,10 +122,12 @@ h1 {
 
 #player {
 	background-color: #DFD;
+	padding-bottom: 10px;
 }
 
 #computer {
 	background-color: #FDD;
+	padding-top: 10px;
 }
 
 .footer {
