@@ -19,7 +19,7 @@ body {
 	padding: 10px 50px 50px 20px;
 	background-color: #DDD;
 	text-align: center;
-	font-family: signika, helvetica, sans-serif;
+	font-family: helvetica, sans-serif;
 }
 
 @font-face {
@@ -128,13 +128,13 @@ h1 {
 	background-color: #FDD;
 }
 
-.footer {
+footer {
 	margin-top: 6px;
 	text-align: center;
 	font-size: 12px;
 	color: #CCC;
 }
-.footer a {
+footer a {
 	color: #AAA;
 	text-decoration: none;
 }

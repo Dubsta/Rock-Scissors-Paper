@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Rock Scissors Paper</title>
-		<link href="RockPaperScissors.css" rel="stylesheet">
-		<script src="jquery-2.1.1.min.js"></script>
-		<script src="jquery-ui.min.js"></script>
-		<link href="jquery-ui.min.css" rel="stylesheet"></script> 
-		<script src="RockPaperScissors.js"></script>
-		<link rel="shortcut icon" href="img/favicon.ico" type="image/icon"/>
-		<link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
-    </head>
-
-    <body>	
-		<div id="page">
-			<h1>Rock Scissors Paper!</h1>
-
-			<!-- Player Choice Box -->
-			<div class="choiceWrapper" id="player">
-				
-				<div class="choiceContainer" >
-					<div class="choice rock">
-						<img src="img/RockCartoon.png" alt="Rock" width="100%">
-					</div>
-					<div class="choice scissors">
-						<img src="img/ScissorsCartoon.png" alt="Scissors" width="100%">
-					</div>
-					<div class="choice paper">
-						<img src="img/PaperCartoon.png" alt="Paper" width="100%">
-					</div>
-				</div>
-				<h3>Player</h3>
-			</div>
-
-			<!-- Middle Game Components -->
-			<div class="middle">
-				<div id="gameResult"><div>...Choose Above...</div></div>
-			</div>
-
-			<!-- Computer Choice Box -->
-			<div class="choiceWrapper" id="computer">
-				<h3>Computer</h3>
-				<div class="choiceContainer">
-					<div class="choice rock">
-						<img src="img/RockCartoon.png" alt="Rock" width="100%">
-					</div>
-					<div class="choice scissors">
-						<img src="img/ScissorsCartoon.png" alt="Scissors" width="100%">
-					</div>
-					<div class="choice paper">
-						<img src="img/PaperCartoon.png" alt="Paper" width="100%">
-					</div>
-				</div>
-			</div>
-
-		</div>
-		<div class="footer">
-			Michael Atkinson |
-			<a href="https://github.com/Dubsta/Rock-Scissors-Paper" rel="author">
-				See it on Github!
-			</a>
-		</div>
-
-    </body>
+<head>
+  <title>Rock Scissors Paper</title>
+  <link href="RockPaperScissors.css" rel="stylesheet">
+  <script src="jquery-2.1.1.min.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <!-- <link href="jquery-ui.min.css" rel="stylesheet"></script> -->
+  <script src="RockPaperScissors.js"></script>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/icon"/>
+</head>
+<body>	
+  <div id="page">
+  	<h1>Rock Scissors Paper!</h1>
+  	<!-- Player Choice Box -->
+  	<section class="choiceWrapper" id="player">
+  		<div class="choiceContainer">
+  			<div class="choice rock">
+  				<img src="img/RockCartoon.png" alt="Rock" width="100%">
+  			</div>
+  			<div class="choice scissors">
+  				<img src="img/ScissorsCartoon.png" alt="Scissors" width="100%">
+  			</div>
+  			<div class="choice paper">
+  				<img src="img/PaperCartoon.png" alt="Paper" width="100%">
+  			</div>
+  		</div>
+  		<h3>Player</h3>
+  	</section>
+  	<!-- Middle Game Components -->
+  	<section class="middle">
+  		<div id="gameResult"><div>...Choose Above...</div></div>
+  	</section>
+  	<!-- Computer Choice Box -->
+  	<section class="choiceWrapper" id="computer">
+  		<h3>Computer</h3>
+  		<div class="choiceContainer">
+  			<div class="choice rock">
+  				<img src="img/RockCartoon.png" alt="Rock" width="100%">
+  			</div>
+  			<div class="choice scissors">
+  				<img src="img/ScissorsCartoon.png" alt="Scissors" width="100%">
+  			</div>
+  			<div class="choice paper">
+  				<img src="img/PaperCartoon.png" alt="Paper" width="100%">
+  			</div>
+  		</div>
+  	</section>
+  </div>
+  <footer>
+  	Michael Atkinson |
+  	<a href="https://github.com/Dubsta/Rock-Scissors-Paper" rel="author">See it on Github!</a>
+  </footer>
+</body>
 </html>
