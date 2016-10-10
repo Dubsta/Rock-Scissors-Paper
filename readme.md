@@ -6,6 +6,6 @@ Play against the computer in this browser game.
 
 
 #### Some TODOs
-* Add counters to keep track of wins.
+* Add counters to keep track of wins
 * Smooter animations
-* Adjust for moblie uesrs
+* Adjust for moblie users
